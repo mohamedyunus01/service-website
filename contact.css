@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color:blue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color:green
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  html,
+  body {
+    background: #f3f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #navbar ul {
+    list-style: none;
+  }
+  
+  #navbar ul li {
+    color: #333;
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  #navbar ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Hide nested ul by default */
+  #navbar ul li ul {
+    display: none;
+  }
+  
+  #navbar ul li:hover {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #98b912;
+  }
+  
+  #navbar ul li:hover a {
+    color: #41ea4c;
+  }
+  
+  /* Nested dropdown show */
+  #navbar ul li:hover ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    margin-top: 1rem;
+  }
+  
+  #navbar ul li:hover ul li {
+    display: block;
+    background: #191413;
+  }
+  
+  #navbar ul li:hover ul li a {
+    color: #e7e5f0;
+  }
+  
+  #navbar ul li:hover ul li:hover {
+    background: #e2681b;
+    color: inherit;
+  }
+  
+  #navbar ul li:hover ul li span {
+    float: right;
+    color: #f5f8f9;
+    background: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+  }
+  
+  #navbar ul li:hover ul li:hover span {
+    background: var(--secondary-color);
+  }
+  
